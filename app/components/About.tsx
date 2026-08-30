@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { personalInfo } from '../lib/data'
+import Image from 'next/image'
 import SectionLabel from '../components/SectionLabel'
 import AnimatedCounter from '../components/AnimatedCounter'
 import GlassCard from '../components/GlassCard'
@@ -19,12 +20,30 @@ export default function About() {
             transition={{ duration: 0.7 }}
             className="lg:col-span-2 relative"
           >
-            <div className="relative aspect-[4/5] rounded-2xl overflow-hidden border border-white/10">
-              <div className="absolute inset-0 bg-gradient-to-br from-accent-cyan/20 to-accent-purple/20" />
-              <div className="absolute inset-0 flex items-center justify-center text-text-tertiary">
-                <span className="text-lg">Profile Photo</span>
-              </div>
-            </div>
+            <div className="relative p-[1px] rounded-2xl
+                bg-gradient-to-br from-accent-cyan
+                via-accent-cyan/30
+                to-accent-purple
+                shadow-[0_0_35px_rgba(34,211,238,0.12)]">
+
+  <div className="relative aspect-[4/5] rounded-2xl overflow-hidden bg-black">
+
+    <Image
+      src="/assets/porto.png"
+      alt="Profile Photo"
+      fill
+      className="object-cover"
+    />
+
+    <div className="absolute inset-0 bg-gradient-to-br
+                    from-accent-cyan/10
+                    via-transparent
+                    to-accent-purple/15
+                    pointer-events-none" />
+
+  </div>
+
+</div>
             
             {/* Floating Badge */}
             <motion.div

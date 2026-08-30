@@ -1,11 +1,12 @@
 'use client'
 
 import { useState } from 'react'
+import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ExternalLink } from 'lucide-react'
-import { SiGithub } from '@icons-pack/react-simple-icons' // Import dari simple-icons
+import { ExternalLink} from 'lucide-react'
+import { FaGithub } from 'react-icons/fa'
 import { projects } from '../lib/data'
-import SectionLabel from '../components/SectionLabel'
+import SectionLabel from './SectionLabel'
 import { cn } from '../lib/utils'
 
 type Category = 'all' | 'web' | 'mobile' | 'design' | 'open-source'
@@ -61,7 +62,7 @@ export default function Projects() {
 
         <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <AnimatePresence mode="popLayout">
-            {filteredProjects.map((project, index) => (
+            {filteredProjects.map((project, index: number) => (
               <motion.div
                 key={project.id}
                 layout
@@ -74,15 +75,21 @@ export default function Projects() {
                 <div className="rounded-2xl bg-background-tertiary border border-white/[0.06] overflow-hidden
                                 hover:border-accent-cyan/30 hover:shadow-glow transition-all duration-300">
                   {/* Image */}
-                  <div className="relative aspect-[16/10] overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-br from-accent-cyan/10 to-accent-purple/10" />
-                    <div className="absolute inset-0 flex items-center justify-center text-text-tertiary">
-                      <span className="text-sm">{project.title} Thumbnail</span>
-                    </div>
-                    
+                <div className="relative aspect-[16/10] overflow-hidden">
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+
+                  <div className="absolute inset-0 bg-gradient-to-br from-accent-cyan/10 to-accent-purple/10" />
+
                     {/* Overlay */}
-                    <div className="absolute inset-0 bg-background-primary/80 opacity-0 group-hover:opacity-100
-                                    transition-opacity duration-300 flex items-center justify-center gap-3">
+                    <div
+                      className="absolute inset-0 bg-background-primary/80 opacity-0 group-hover:opacity-100
+                                transition-opacity duration-300 flex items-center justify-center gap-3"
+                    >
                       {project.liveUrl && (
                         <a
                           href={project.liveUrl}
@@ -104,7 +111,7 @@ export default function Projects() {
                                      hover:bg-white/20 transition-colors"
                           aria-label="View source code"
                         >
-                          <SiGithub className="w-5 h-5" /> {/* Gunakan SiGithub */}
+                          <FaGithub className="w-5 h-5" />
                         </a>
                       )}
                     </div>
@@ -127,7 +134,7 @@ export default function Projects() {
                     </p>
 
                     <div className="flex flex-wrap gap-2">
-                      {project.tech.map((tech) => (
+                      {project.tech.map((tech: string) => (
                         <span
                           key={tech}
                           className="text-xs text-text-tertiary bg-white/5 px-2 py-1 rounded-md"

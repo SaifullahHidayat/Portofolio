@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import { ExternalLink } from 'lucide-react'
 import { experiences } from '../lib/data'
-import SectionLabel from '../components/SectionLabel'
+import SectionLabel from './SectionLabel'
 import { cn } from '../lib/utils'
 
 export default function Experience() {
@@ -27,7 +27,7 @@ export default function Experience() {
           {/* Vertical Line */}
           <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-accent-cyan/50 via-accent-purple/30 to-transparent md:-translate-x-px" />
 
-          {experiences.map((exp, index) => {
+          {experiences.map((exp, index: number) => {
             const isLeft = index % 2 === 0
             
             return (
@@ -82,7 +82,7 @@ export default function Experience() {
                     </a>
 
                     <ul className="space-y-2 mb-4">
-                      {exp.description.map((desc, i) => (
+                      {exp.description.map((desc: string, i: number) => (
                         <li key={i} className="text-sm text-text-secondary leading-relaxed flex gap-2">
                           <span className="text-accent-cyan mt-1.5">•</span>
                           {desc}
@@ -91,7 +91,7 @@ export default function Experience() {
                     </ul>
 
                     <div className="flex flex-wrap gap-2">
-                      {exp.tech.map((tech) => (
+                      {exp.tech.map((tech: string) => (
                         <span
                           key={tech}
                           className="text-xs text-text-tertiary bg-white/5 px-2 py-1 rounded-md border border-white/5"

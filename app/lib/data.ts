@@ -1,10 +1,10 @@
-import { Project, Experience, SkillCategory } from '../types'
+import type { Project, Experience, SkillCategory } from '../types'
 
 export const personalInfo = {
-  name: 'Alex Dev',
-  role: 'Full Stack Developer',
-  email: 'hello@alexdev.com',
-  location: 'Jakarta, Indonesia',
+  name: 'Saifullah Hidayat',
+  role: 'Front End Developer',
+  email: 'syaifullah1108@gmail.com',
+  location: 'Tangerang, Indonesia',
   tagline: 'I build digital experiences that matter',
   bio: [
     'Saya adalah developer passionate dengan pengalaman 5+ tahun membangun aplikasi web modern yang scalable dan user-friendly.',
@@ -12,13 +12,13 @@ export const personalInfo = {
     'Saat ini saya terbuka untuk kesempatan freelance, full-time, atau kolaborasi project menarik.'
   ],
   stats: [
-    { label: 'Years Experience', value: 5 },
-    { label: 'Projects Completed', value: 47 },
-    { label: 'Happy Clients', value: 32 },
+    { label: 'Years Experience', value: 0 },
+    { label: 'Projects Completed', value: 5 },
+    { label: 'Happy Clients', value: 2 },
     { label: 'Coffee Consumed', value: 999 },
   ],
   socials: [
-    { name: 'GitHub', url: 'https://github.com', icon: 'github' },
+    { name: 'GitHub', url: 'https://github.com/SaifullahHidayat', icon: 'github' },
     { name: 'LinkedIn', url: 'https://linkedin.com', icon: 'linkedin' },
     { name: 'Twitter', url: 'https://twitter.com', icon: 'twitter' },
     { name: 'Dribbble', url: 'https://dribbble.com', icon: 'dribbble' },
@@ -84,12 +84,12 @@ export const projects: Project[] = [
   },
   {
     id: '2',
-    title: 'Task Management App',
-    description: 'Aplikasi manajemen task kolaboratif dengan real-time update dan drag-drop interface.',
+    title: 'Monitoring kualitas air akuarium',
+    description: 'Aplikasi monitoring air akuarium secara real-time berbasis IoT',
     category: 'web',
-    image: '/project-2.jpg',
-    tech: ['React', 'Node.js', 'Socket.io', 'MongoDB'],
-    liveUrl: '#',
+    image: '/assets/monitoring.png',
+    tech: ['PHP Native', 'javascript', 'C++', 'mysql'],
+    liveUrl: 'https://saifulmonitoring.my.id',
     githubUrl: '#',
   },
   {
