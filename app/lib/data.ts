@@ -156,10 +156,10 @@ export const experiences: Experience[] = [
     companyUrl: 'https://saifulmonitoring.my.id',
     dateRange: '2026',
     description: [
-      'Mengerjakan 20+ website untuk klien dari berbagai industri',
-      'Collaboration dengan tim design untuk implementasi pixel-perfect',
-      'Maintenance dan optimasi website existing'
+      'Mengembangkan sistem monitoring kualitas air akuarium berbasis ESP32',
+      'Membuat dashboard untuk menampilkan data sensor',
+      'Maintenance dan optimasi website'
     ],
-    tech: ['JavaScript', 'PHP', 'WordPress', 'SASS']
+    tech: ['JavaScript', 'PHP', 'mysql', 'Fuzzy']
   }
 ]
