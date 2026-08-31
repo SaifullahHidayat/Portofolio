@@ -74,7 +74,7 @@ export default function Navigation() {
             onClick={(e) => handleNavClick(e, '#home')}
             className="font-display text-xl font-bold text-gradient"
           >
-            AD.
+            Sh.
           </a>
 
           {/* Desktop Navigation */}

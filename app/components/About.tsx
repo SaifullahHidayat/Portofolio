@@ -53,7 +53,7 @@ export default function About() {
               transition={{ delay: 0.4 }}
               className="absolute -bottom-4 -right-4 md:bottom-8 md:-right-8 glass rounded-xl px-4 py-3"
             >
-              <div className="text-2xl font-display font-bold text-accent-cyan">5+</div>
+              <div className="text-2xl font-display font-bold text-accent-cyan">0+</div>
               <div className="text-xs text-text-secondary">Years Exp.</div>
             </motion.div>
           </motion.div>

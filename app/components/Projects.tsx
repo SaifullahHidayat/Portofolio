@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion';
 import { ExternalLink} from 'lucide-react';
 import { FaGithub } from 'react-icons/fa';
@@ -43,6 +44,12 @@ export default function Projects() {
               <motion.div key={project.id} layout initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.9 }} transition={{ duration: 0.4, delay: index * 0.1 }} className="group">
                 <div className="rounded-2xl bg-background-tertiary border border-white/[0.06] overflow-hidden hover:border-accent-cyan/30 hover:shadow-glow transition-all duration-300">
                   <div className="relative aspect-[16/10] overflow-hidden">
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
                     <div className="absolute inset-0 bg-gradient-to-br from-accent-cyan/10 to-accent-purple/10" />
                     <div className="absolute inset-0 flex items-center justify-center text-text-tertiary"><span className="text-sm">{project.title} Thumbnail</span></div>
                     <div className="absolute inset-0 bg-background-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-3">
