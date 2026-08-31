@@ -51,7 +51,6 @@ export default function Projects() {
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                     <div className="absolute inset-0 bg-gradient-to-br from-accent-cyan/10 to-accent-purple/10" />
-                    <div className="absolute inset-0 flex items-center justify-center text-text-tertiary"><span className="text-sm">{project.title} Thumbnail</span></div>
                     <div className="absolute inset-0 bg-background-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-3">
                       {project.liveUrl && <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-accent-cyan text-background-primary hover:scale-110 transition-transform" aria-label="View live demo"><ExternalLink className="w-5 h-5" /></a>}
                       {project.githubUrl && <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-white/10 text-text-primary border border-white/20 hover:bg-white/20 transition-colors" aria-label="View source code"><FaGithub className="w-5 h-5" /></a>}
