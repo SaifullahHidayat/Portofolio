@@ -19,7 +19,7 @@ export const personalInfo = {
   ],
   socials: [
     { name: 'GitHub', url: 'https://github.com/SaifullahHidayat', icon: 'github' },
-    { name: 'LinkedIn', url: 'https://linkedin.com', icon: 'linkedin' },
+    { name: 'LinkedIn', url: 'https://linkedin.com/in/Saifullah-Hidayat-398653262', icon: 'linkedin' },
     { name: 'Twitter', url: 'https://twitter.com', icon: 'twitter' },
     { name: 'Dribbble', url: 'https://dribbble.com', icon: 'dribbble' },
   ]
@@ -125,36 +125,36 @@ export const projects: Project[] = [
 export const experiences: Experience[] = [
   {
     id: '1',
-    role: 'Senior Frontend Engineer',
-    company: 'TechCorp Indonesia',
+    role: 'S1 Teknik Informatika',
+    company: 'Universitas Pamulang',
     companyUrl: '#',
-    dateRange: '2022 - Present',
+    dateRange: '2022 - 2026',
     description: [
-      'Memimpin tim frontend 5 orang dalam pengembangan platform SaaS',
-      'Mengimplementasikan design system yang mengurangi development time 40%',
-      'Optimasi performa mencapai Lighthouse score 95+ di semua metrics'
+      'Mengembangkan berbagai project website sebagai bagian dari pembelajaran dan tugas kuliah ',
+      'Mengembangkan project monitoring kalitas air berbasis iot sebagai tugas kuliah',
+      'Mempelajari pemrograman, database dll'
     ],
-    tech: ['Next.js', 'TypeScript', 'Tailwind', 'GraphQL']
+    tech: ['HTML', 'CSS', 'Tailwind', 'mysql', 'PHP']
   },
   {
     id: '2',
-    role: 'Full Stack Developer',
-    company: 'StartupXYZ',
-    companyUrl: '#',
-    dateRange: '2020 - 2022',
+    role: 'Front end Developer',
+    company: 'Personal Projects',
+    companyUrl: 'https://github.com/SaifullahHidayat',
+    dateRange: '2025 - present',
     description: [
-      'Mengembangkan MVP dari nol hingga 10K+ active users',
-      'Setup CI/CD pipeline dan infrastructure di AWS/Vercel',
+      'Membangun website menggunakan React dan Vite.',
+      'Mengembangkan responsive UI menggunakan Tailwind CSS.',
       'Integrasi payment gateway dan sistem subscription'
     ],
     tech: ['React', 'Node.js', 'PostgreSQL', 'Docker']
   },
   {
     id: '3',
-    role: 'Junior Web Developer',
-    company: 'Digital Agency',
-    companyUrl: '#',
-    dateRange: '2019 - 2020',
+    role: 'IoT & Web Development',
+    company: 'Aquarium Water Quality Monitoring',
+    companyUrl: 'https://saifulmonitoring.my.id',
+    dateRange: '2026',
     description: [
       'Mengerjakan 20+ website untuk klien dari berbagai industri',
       'Collaboration dengan tim design untuk implementasi pixel-perfect',
