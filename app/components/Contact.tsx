@@ -38,19 +38,42 @@ export default function Contact() {
     return Object.keys(newErrors).length === 0
   }
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    if (!validate()) return
+  // Di dalam file komponen Anda (Contact.tsx)
 
-    setFormState('loading')
-    
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1500))
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault()
+  if (!validate()) return
+
+  setFormState('loading')
+  
+  try {
+    const response = await fetch('/api/contact', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
+    })
+
+    const result = await response.json()
+
+    if (!response.ok) {
+      throw new Error(result.error || 'Gagal mengirim')
+    }
+
     setFormState('success')
     setFormData({ name: '', email: '', subject: '', message: '' })
     
+    // Reset status setelah 5 detik
+    setTimeout(() => setFormState('idle'), 5000)
+    
+  } catch (error) {
+    console.error(error)
+    setFormState('error')
+    // Reset error state setelah beberapa detik
     setTimeout(() => setFormState('idle'), 5000)
   }
+}
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }))
