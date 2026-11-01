@@ -7,9 +7,9 @@ export const personalInfo = {
   location: 'Tangerang, Indonesia',
   tagline: 'I build digital experiences that matter',
   bio: [
-    'Saya adalah developer passionate dengan pengalaman 5+ tahun membangun aplikasi web modern yang scalable dan user-friendly.',
-    'Fokus utama saya pada ekosistem React, Node.js, dan cloud infrastructure. Saya percaya bahwa kode yang baik adalah kode yang readable, maintainable, dan performant.',
-    'Saat ini saya terbuka untuk kesempatan freelance, full-time, atau kolaborasi project menarik.'
+    'Im a Computer Science graduate from Universitas Pamulang with an interest in UI/UX design, data analysis, and web development.',
+    'I enjoy creating user-friendly interfaces, exploring data to find meaningful insights, and learning how technology can solve real-world problems.',
+    'Currently, Im building my skills through personal projects and continuous learning, while looking for opportunities to grow and gain professional experience.'
   ],
   stats: [
     { label: 'Years Experience', value: 0 },
