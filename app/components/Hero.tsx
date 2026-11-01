@@ -3,7 +3,6 @@
 import { motion } from 'framer-motion';
 import { ChevronDown, Circle } from 'lucide-react';
 import { personalInfo } from '../lib/data';
-import GradientText from './GradientText';
 import SocialLinks from './SocialLinks';
 
 const containerVariants = {
@@ -12,71 +11,88 @@ const containerVariants = {
     opacity: 1,
     transition: {
       staggerChildren: 0.15,
-      delayChildren: 0.3,
+      delayChildren: 0.2,
     },
   },
 } as const;
 
 const itemVariants = {
-  hidden: { opacity: 0, y: 30 },
+  hidden: { opacity: 0, y: 20 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: 'easeOut' },
+    transition: { duration: 0.5, ease: 'easeOut' },
   },
 } as const;
 
 export default function Hero() {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-      <div className="absolute inset-0 bg-background-primary">
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:64px_64px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)]" />
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-accent-cyan/10 rounded-full blur-[128px] animate-pulse" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent-purple/10 rounded-full blur-[128px] animate-pulse" style={{ animationDelay: '1s' }} />
-      </div>
+      
+      {/* Background Minimalis (Hanya warna dasar, tanpa glow/gradien aneh) */}
+      <div className="absolute inset-0 bg-background-primary" />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
         <motion.div variants={containerVariants} initial="hidden" animate="visible" className="flex flex-col items-center">
+          
+          {/* Status Badge */}
           <motion.div variants={itemVariants} className="mb-8">
-            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-success/10 border border-success/20 text-success text-sm font-medium">
-              <Circle className="w-2 h-2 fill-success animate-pulse" />
+            <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-background-secondary border border-border-subtle text-text-secondary text-sm font-mono">
+              <Circle className="w-2 h-2 fill-success text-success animate-pulse" />
               Available for work
             </span>
           </motion.div>
 
-          <motion.h1 variants={itemVariants} className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-text-primary mb-6">
-            Hi, I&apos;m {personalInfo.name}
+          {/* Headline Utama */}
+          <motion.h1 variants={itemVariants} className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-text-primary mb-6">
+            Hi, I&apos;m {personalInfo.name}.<br />
+            <span className="text-text-tertiary">
+              {personalInfo.tagline}
+            </span>
           </motion.h1>
 
-          <motion.h2 variants={itemVariants} className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-8">
-            <GradientText>{personalInfo.tagline}</GradientText>
-          </motion.h2>
-
-          <motion.p variants={itemVariants} className="text-lg md:text-xl text-text-secondary max-w-2xl mb-10 leading-relaxed">
-            Specialized in building modern web applications with cutting-edge technologies.
-            Turning complex problems into elegant, user-friendly solutions.
+          {/* Deskripsi */}
+          <motion.p variants={itemVariants} className="text-lg text-text-secondary max-w-2xl mb-10 leading-relaxed">
+            Saya membangun aplikasi web modern dengan fokus pada performa, skalabilitas, 
+            dan pengalaman pengguna yang bersih.
           </motion.p>
 
-          <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4 mb-12">
-            <a href="#projects" className="px-8 py-3.5 rounded-full bg-gradient-accent text-background-primary font-semibold hover:shadow-glow transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]">
+          {/* Tombol Aksi */}
+          <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4 mb-14">
+            <a 
+              href="#projects" 
+              className="px-8 py-3.5 rounded-lg bg-white text-black font-semibold hover:bg-gray-200 transition-colors"
+            >
               View My Work
             </a>
-            <a href="#contact" className="px-8 py-3.5 rounded-full border border-white/20 text-text-primary font-semibold hover:bg-white/5 hover:border-accent-cyan/50 transition-all duration-300">
+            <a 
+              href="#contact" 
+              className="px-8 py-3.5 rounded-lg border border-border-strong text-text-primary font-semibold hover:bg-background-secondary transition-colors"
+            >
               Contact Me
             </a>
           </motion.div>
 
+          {/* Ikon Sosial Media (Dikembalikan) */}
           <motion.div variants={itemVariants}>
-            <SocialLinks links={personalInfo.socials} />
+            <SocialLinks links={personalInfo.socials} size="md" />
           </motion.div>
+
         </motion.div>
       </div>
 
-      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.5 }} className="absolute bottom-8 left-1/2 -translate-x-1/2">
-        <motion.div animate={{ y: [0, 10, 0] }} transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}>
+      {/* Panah ke bawah */}
+      <motion.div 
+        initial={{ opacity: 0 }} 
+        animate={{ opacity: 1 }} 
+        transition={{ delay: 1 }} 
+        className="absolute bottom-8 left-1/2 -translate-x-1/2"
+      >
+        <motion.div animate={{ y: [0, 8, 0] }} transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}>
           <ChevronDown className="w-6 h-6 text-text-tertiary" />
         </motion.div>
       </motion.div>
+      
     </section>
   );
 }
