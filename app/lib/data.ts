@@ -74,13 +74,12 @@ export const skillCategories: SkillCategory[] = [
 export const projects: Project[] = [
   {
     id: '1',
-    title: 'E-Commerce Dashboard',
+    title: 'Booking Garuda indonesia',
     description: 'Dashboard analytics real-time dengan visualisasi data interaktif dan manajemen inventory.',
     category: 'web',
-    image: '/project-1.jpg',
+    image: '/assets/Booking.png',
     tech: ['Next.js', 'TypeScript', 'Tailwind', 'Prisma'],
-    liveUrl: '#',
-    githubUrl: '#',
+    liveUrl: 'https://www.figma.com/design/ntVT8EEkgkJVTPo8lNBvzc/booking?node-id=66-291&t=giv6QrQiL66FKdMU-1',
   },
   {
     id: '2',

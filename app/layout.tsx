@@ -17,18 +17,18 @@ const spaceGrotesk = Space_Grotesk({
 })
 
 export const metadata: Metadata = {
-  title: 'Portfolio | Full Stack Developer',
+  title: 'Portfolio',
   description: 'Personal portfolio showcasing web development projects, skills, and professional experience.',
   keywords: ['portfolio', 'web developer', 'next.js', 'react', 'typescript'],
   authors: [{ name: 'Your Name' }],
   openGraph: {
-    title: 'Portfolio | Full Stack Developer',
+    title: 'Portfolio',
     description: 'Personal portfolio showcasing web development projects and skills.',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Portfolio | Full Stack Developer',
+    title: 'Portfolio',
     description: 'Personal portfolio showcasing web development projects and skills.',
   },
 }
