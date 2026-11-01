@@ -2,7 +2,7 @@ export interface Project {
   id: string;
   title: string;
   description: string;
-  category: 'web' | 'mobile' | 'design' | 'open-source';
+  category: 'web' | 'mobile' | 'design' | 'open-source' | 'UI/UX';
   image: string;
   tech: string[];
   liveUrl?: string;

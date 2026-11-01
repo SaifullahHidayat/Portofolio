@@ -14,14 +14,14 @@ export const personalInfo = {
   stats: [
     { label: 'Years Experience', value: 0 },
     { label: 'Projects Completed', value: 5 },
-    { label: 'Happy Clients', value: 2 },
+    { label: 'Happy Clients', value: 0 },
     { label: 'Coffee Consumed', value: 999 },
   ],
   socials: [
     { name: 'GitHub', url: 'https://github.com/SaifullahHidayat', icon: 'github' },
     { name: 'LinkedIn', url: 'https://linkedin.com/in/Saifullah-Hidayat-398653262', icon: 'linkedin' },
     { name: 'Twitter', url: 'https://twitter.com', icon: 'twitter' },
-    { name: 'Dribbble', url: 'https://dribbble.com', icon: 'dribbble' },
+    { name: 'Dribbble', url: 'https://dribbble.com/saifullah-hidayat', icon: 'dribbble' },
   ]
 }
 
@@ -74,11 +74,11 @@ export const skillCategories: SkillCategory[] = [
 export const projects: Project[] = [
   {
     id: '1',
-    title: 'Booking Garuda indonesia',
-    description: 'Dashboard analytics real-time dengan visualisasi data interaktif dan manajemen inventory.',
-    category: 'web',
+    title: 'Booking Garuda indonesia (Unofficial Concept)',
+    description: '.',
+    category: 'UI/UX',
     image: '/assets/Booking.png',
-    tech: ['Next.js', 'TypeScript', 'Tailwind', 'Prisma'],
+    tech: ['Canva', 'Figma'],
     liveUrl: 'https://www.figma.com/design/ntVT8EEkgkJVTPo8lNBvzc/booking?node-id=66-291&t=giv6QrQiL66FKdMU-1',
   },
   {
@@ -89,34 +89,6 @@ export const projects: Project[] = [
     image: '/assets/monitoring.png',
     tech: ['PHP Native', 'javascript', 'C++', 'mysql'],
     liveUrl: 'https://saifulmonitoring.my.id',
-    githubUrl: '#',
-  },
-  {
-    id: '3',
-    title: 'Finance Mobile App',
-    description: 'Aplikasi mobile tracking keuangan pribadi dengan budgeting dan report otomatis.',
-    category: 'mobile',
-    image: '/project-3.jpg',
-    tech: ['React Native', 'TypeScript', 'Firebase'],
-    liveUrl: '#',
-  },
-  {
-    id: '4',
-    title: 'Design System',
-    description: 'Komprehensif design system dengan komponen reusable, dokumentasi, dan token system.',
-    category: 'design',
-    image: '/project-4.jpg',
-    tech: ['Figma', 'Storybook', 'React'],
-    liveUrl: '#',
-    githubUrl: '#',
-  },
-  {
-    id: '5',
-    title: 'Open Source CLI Tool',
-    description: 'Command line interface untuk scaffolding project Next.js dengan best practices.',
-    category: 'open-source',
-    image: '/project-5.jpg',
-    tech: ['TypeScript', 'Node.js', 'CLI'],
     githubUrl: '#',
   },
 ]
@@ -130,7 +102,7 @@ export const experiences: Experience[] = [
     dateRange: '2022 - 2026',
     description: [
       'Mengembangkan berbagai project website sebagai bagian dari pembelajaran dan tugas kuliah ',
-      'Mengembangkan project monitoring kalitas air berbasis iot sebagai tugas kuliah',
+      'Mengembangkan project monitoring kalitas air berbasis iot sebagai tugas Akhir',
       'Mempelajari pemrograman, database dll'
     ],
     tech: ['HTML', 'CSS', 'Tailwind', 'mysql', 'PHP']
