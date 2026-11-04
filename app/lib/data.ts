@@ -94,7 +94,7 @@ export const projects: Project[] = [
   {
     id: '3',
     title: 'Analysist data retail',
-    description: 'Memfokuskan alokasi stok pada kategori Beauty dan mempersiapkan kampanye pemasaran khusus (targeted ads) yang menyasar segmen usia 46-55 tahun, serta memaksimalkan budget promosi pada periode Mei-Juli untuk menangkap momentum lonjakan pasar.',
+    description: 'Menganalisis 1.000+ data transaksi retail untuk mengidentifikasi tren penjualan, segmentasi pelanggan, dan mengoptimalkan strategi stok produk.',
     category: 'design',
     image: '/assets/data.png',
     tech: ['Google Studio', 'Data Studio'],
