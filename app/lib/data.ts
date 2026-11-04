@@ -75,7 +75,7 @@ export const projects: Project[] = [
   {
     id: '1',
     title: 'Booking Garuda indonesia (Unofficial Concept)',
-    description: '.',
+    description: 'Membuat Tampilan booking web minimalis dengan 1 landing page',
     category: 'UI/UX',
     image: '/assets/Booking.png',
     tech: ['Canva', 'Figma'],
@@ -90,6 +90,15 @@ export const projects: Project[] = [
     tech: ['PHP Native', 'javascript', 'C++', 'mysql'],
     liveUrl: 'https://saifulmonitoring.my.id',
     githubUrl: '#',
+  },
+  {
+    id: '3',
+    title: 'Analysist data retail',
+    description: 'Memfokuskan alokasi stok pada kategori Beauty dan mempersiapkan kampanye pemasaran khusus (targeted ads) yang menyasar segmen usia 46-55 tahun, serta memaksimalkan budget promosi pada periode Mei-Juli untuk menangkap momentum lonjakan pasar.',
+    category: 'design',
+    image: '/assets/data.jpg',
+    tech: ['Google Studio', 'Data Studio'],
+    liveUrl: 'https://datastudio.google.com/s/pP5B7Z24DWM',
   },
 ]
 
