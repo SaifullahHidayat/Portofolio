@@ -100,6 +100,15 @@ export const projects: Project[] = [
     tech: ['Google Studio', 'Data Studio'],
     liveUrl: 'https://datastudio.google.com/s/pP5B7Z24DWM',
   },
+  {
+    id: '4',
+    title: 'Design Personal finance app',
+    description: 'Membuat tampilan UI/UX personal finance degan AI',
+    category: 'design',
+    image: '/assets/mockup.png',
+    tech: ['Claude AI', 'Figma'],
+    liveUrl: 'https://www.figma.com/design/ceaxnXB3t8OFCYSL56wNpV/Personal-Finance-App---Mobile-UI?node-id=0-1&t=qJGC1QG1NUmL2lZL-1',
+  },
 ]
 
 export const experiences: Experience[] = [
